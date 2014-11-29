@@ -1,0 +1,1289 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width"/>
+
+    <!--<link rel="stylesheet" href="css/ink.css">--> <!-- For testing only -->
+
+    <style type="text/css">
+      
+      /**********************************************
+* Ink v1.0.5 - Copyright 2013 ZURB Inc        *
+**********************************************/
+
+/* Client-specific Styles & Reset */
+
+#outlook a { 
+  padding:0; 
+} 
+
+body{ 
+  width:100% !important; 
+  min-width: 100%;
+  -webkit-text-size-adjust:100%; 
+  -ms-text-size-adjust:100%; 
+  margin:0; 
+  padding:0;
+}
+
+.ExternalClass { 
+  width:100%;
+} 
+
+.ExternalClass, 
+.ExternalClass p, 
+.ExternalClass span, 
+.ExternalClass font, 
+.ExternalClass td, 
+.ExternalClass div { 
+  line-height: 100%; 
+} 
+
+#backgroundTable { 
+  margin:0; 
+  padding:0; 
+  width:100% !important; 
+  line-height: 100% !important; 
+}
+
+img { 
+  outline:none; 
+  text-decoration:none; 
+  -ms-interpolation-mode: bicubic;
+  width: auto;
+  max-width: 100%; 
+  float: left; 
+  clear: both; 
+  display: block;
+}
+
+center {
+  width: 100%;
+  min-width: 580px;
+}
+
+a img { 
+  border: none;
+}
+
+p {
+  margin: 0 0 0 10px;
+}
+
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+td { 
+  word-break: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto;
+  border-collapse: collapse !important; 
+}
+
+table, tr, td {
+  padding: 0;
+  vertical-align: top;
+  text-align: left;
+}
+
+hr {
+  color: #d9d9d9; 
+  background-color: #d9d9d9; 
+  height: 1px; 
+  border: none;
+}
+
+/* Responsive Grid */
+
+table.body {
+  height: 100%;
+  width: 100%;
+}
+
+table.container {
+  width: 580px;
+  margin: 0 auto;
+  text-align: inherit;
+}
+
+table.row { 
+  padding: 0px; 
+  width: 100%;
+  position: relative;
+}
+
+table.container table.row {
+  display: block;
+}
+
+td.wrapper {
+  padding: 10px 20px 0px 0px;
+  position: relative;
+}
+
+table.columns,
+table.column {
+  margin: 0 auto;
+}
+
+table.columns td,
+table.column td {
+  padding: 0px 0px 10px; 
+}
+
+table.columns td.sub-columns,
+table.column td.sub-columns,
+table.columns td.sub-column,
+table.column td.sub-column {
+  padding-right: 10px;
+}
+
+td.sub-column, td.sub-columns {
+  min-width: 0px;
+}
+
+table.row td.last,
+table.container td.last {
+  padding-right: 0px;
+}
+
+table.one { width: 30px; }
+table.two { width: 80px; }
+table.three { width: 130px; }
+table.four { width: 180px; }
+table.five { width: 230px; }
+table.six { width: 280px; }
+table.seven { width: 330px; }
+table.eight { width: 380px; }
+table.nine { width: 430px; }
+table.ten { width: 480px; }
+table.eleven { width: 530px; }
+table.twelve { width: 580px; }
+
+table.one center { min-width: 30px; }
+table.two center { min-width: 80px; }
+table.three center { min-width: 130px; }
+table.four center { min-width: 180px; }
+table.five center { min-width: 230px; }
+table.six center { min-width: 280px; }
+table.seven center { min-width: 330px; }
+table.eight center { min-width: 380px; }
+table.nine center { min-width: 430px; }
+table.ten center { min-width: 480px; }
+table.eleven center { min-width: 530px; }
+table.twelve center { min-width: 580px; }
+
+table.one .panel center { min-width: 10px; }
+table.two .panel center { min-width: 60px; }
+table.three .panel center { min-width: 110px; }
+table.four .panel center { min-width: 160px; }
+table.five .panel center { min-width: 210px; }
+table.six .panel center { min-width: 260px; }
+table.seven .panel center { min-width: 310px; }
+table.eight .panel center { min-width: 360px; }
+table.nine .panel center { min-width: 410px; }
+table.ten .panel center { min-width: 460px; }
+table.eleven .panel center { min-width: 510px; }
+table.twelve .panel center { min-width: 560px; }
+
+.body .columns td.one,
+.body .column td.one { width: 8.333333%; }
+.body .columns td.two,
+.body .column td.two { width: 16.666666%; }
+.body .columns td.three,
+.body .column td.three { width: 25%; }
+.body .columns td.four,
+.body .column td.four { width: 33.333333%; }
+.body .columns td.five,
+.body .column td.five { width: 41.666666%; }
+.body .columns td.six,
+.body .column td.six { width: 50%; }
+.body .columns td.seven,
+.body .column td.seven { width: 58.333333%; }
+.body .columns td.eight,
+.body .column td.eight { width: 66.666666%; }
+.body .columns td.nine,
+.body .column td.nine { width: 75%; }
+.body .columns td.ten,
+.body .column td.ten { width: 83.333333%; }
+.body .columns td.eleven,
+.body .column td.eleven { width: 91.666666%; }
+.body .columns td.twelve,
+.body .column td.twelve { width: 100%; }
+
+td.offset-by-one { padding-left: 50px; }
+td.offset-by-two { padding-left: 100px; }
+td.offset-by-three { padding-left: 150px; }
+td.offset-by-four { padding-left: 200px; }
+td.offset-by-five { padding-left: 250px; }
+td.offset-by-six { padding-left: 300px; }
+td.offset-by-seven { padding-left: 350px; }
+td.offset-by-eight { padding-left: 400px; }
+td.offset-by-nine { padding-left: 450px; }
+td.offset-by-ten { padding-left: 500px; }
+td.offset-by-eleven { padding-left: 550px; }
+
+td.expander {
+  visibility: hidden;
+  width: 0px;
+  padding: 0 !important;
+}
+
+table.columns .text-pad,
+table.column .text-pad {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+table.columns .left-text-pad,
+table.columns .text-pad-left,
+table.column .left-text-pad,
+table.column .text-pad-left {
+  padding-left: 10px;
+}
+
+table.columns .right-text-pad,
+table.columns .text-pad-right,
+table.column .right-text-pad,
+table.column .text-pad-right {
+  padding-right: 10px;
+}
+
+/* Block Grid */
+
+.block-grid {
+  width: 100%;
+  max-width: 580px;
+}
+
+.block-grid td {
+  display: inline-block;
+  padding:10px;
+}
+
+.two-up td {
+  width:270px;
+}
+
+.three-up td {
+  width:173px;
+}
+
+.four-up td {
+  width:125px;
+}
+
+.five-up td {
+  width:96px;
+}
+
+.six-up td {
+  width:76px;
+}
+
+.seven-up td {
+  width:62px;
+}
+
+.eight-up td {
+  width:52px;
+}
+
+/* Alignment & Visibility Classes */
+
+table.center, td.center {
+  text-align: center;
+}
+
+h1.center,
+h2.center,
+h3.center,
+h4.center,
+h5.center,
+h6.center {
+  text-align: center;
+}
+
+span.center {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+img.center {
+  margin: 0 auto;
+  float: none;
+}
+
+.show-for-small,
+.hide-for-desktop {
+  display: none;
+}
+
+/* Typography */
+
+body, table.body, h1, h2, h3, h4, h5, h6, p, td { 
+  color: #222222;
+  font-family: "Helvetica", "Arial", sans-serif; 
+  font-weight: normal; 
+  padding:0; 
+  margin: 0;
+  text-align: left; 
+  line-height: 1.3;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  word-break: normal;
+}
+
+h1 {font-size: 40px;}
+h2 {font-size: 36px;}
+h3 {font-size: 32px;}
+h4 {font-size: 28px;}
+h5 {font-size: 24px;}
+h6 {font-size: 20px;}
+body, table.body, p, td {font-size: 14px;line-height:19px;}
+
+p.lead, p.lede, p.leed {
+  font-size: 18px;
+  line-height:21px;
+}
+
+p { 
+  margin-bottom: 10px;
+}
+
+small {
+  font-size: 10px;
+}
+
+a {
+  color: #2ba6cb; 
+  text-decoration: none;
+}
+
+a:hover { 
+  color: #ccc !important;
+}
+
+a:active { 
+  color: #ccc !important;
+}
+
+a:visited { 
+  /*color: #2ba6cb !important;*/
+}
+
+h1 a, 
+h2 a, 
+h3 a, 
+h4 a, 
+h5 a, 
+h6 a {
+  color: #2ba6cb;
+}
+
+h1 a:active, 
+h2 a:active,  
+h3 a:active, 
+h4 a:active, 
+h5 a:active, 
+h6 a:active { 
+  color: #2ba6cb !important; 
+} 
+
+h1 a:visited, 
+h2 a:visited,  
+h3 a:visited, 
+h4 a:visited, 
+h5 a:visited, 
+h6 a:visited { 
+  /*color: #2ba6cb !important; */
+} 
+
+/* Panels */
+
+.panel {
+  background: #f2f2f2;
+  border: 1px solid #d9d9d9;
+  padding: 10px !important;
+}
+
+.sub-grid table {
+  width: 100%;
+}
+
+.sub-grid td.sub-columns {
+  padding-bottom: 0;
+}
+
+/* Buttons */
+
+table.button,
+table.tiny-button,
+table.small-button,
+table.medium-button,
+table.large-button {
+  width: 100%;
+  overflow: hidden;
+}
+
+table.button td,
+table.tiny-button td,
+table.small-button td,
+table.medium-button td,
+table.large-button td {
+  display: block;
+  width: auto !important;
+  text-align: center;
+  background: #2ba6cb;
+  border: 1px solid #2284a1;
+  color: #ffffff;
+  padding: 8px 0;
+}
+
+table.tiny-button td {
+  padding: 5px 0 4px;
+}
+
+table.small-button td {
+  padding: 8px 0 7px;
+}
+
+table.medium-button td {
+  padding: 12px 0 10px;
+}
+
+table.large-button td {
+  padding: 21px 0 18px;
+}
+
+table.button td a,
+table.tiny-button td a,
+table.small-button td a,
+table.medium-button td a,
+table.large-button td a {
+  font-weight: bold;
+  text-decoration: none;
+  font-family: Helvetica, Arial, sans-serif;
+  color: #ffffff;
+  font-size: 16px;
+}
+
+table.tiny-button td a {
+  font-size: 12px;
+  font-weight: normal;
+}
+
+table.small-button td a {
+  font-size: 16px;
+}
+
+table.medium-button td a {
+  font-size: 20px;
+}
+
+table.large-button td a {
+  font-size: 24px;
+}
+
+table.button:hover td,
+table.button:visited td,
+table.button:active td {
+  /*background: #2795b6 !important;*/
+}
+
+table.button:hover td a,
+table.button:visited td a,
+table.button:active td a {
+  /*color: #fff !important;*/
+}
+
+table.button:hover td,
+table.tiny-button:hover td,
+table.small-button:hover td,
+table.medium-button:hover td,
+table.large-button:hover td {
+  background: #2795b6 !important;
+}
+
+table.button:hover td a,
+table.button:active td a,
+table.button td a:visited,
+table.tiny-button:hover td a,
+table.tiny-button:active td a,
+table.tiny-button td a:visited,
+table.small-button:hover td a,
+table.small-button:active td a,
+table.small-button td a:visited,
+table.medium-button:hover td a,
+table.medium-button:active td a,
+table.medium-button td a:visited,
+table.large-button:hover td a,
+table.large-button:active td a,
+table.large-button td a:visited {
+  color: #ffffff !important; 
+}
+
+table.secondary td {
+  background: #e9e9e9;
+  border-color: #d0d0d0;
+  color: #555;
+}
+
+table.secondary td a {
+  color: #555;
+}
+
+table.secondary:hover td {
+  background: #d0d0d0 !important;
+  color: #555;
+}
+
+table.secondary:hover td a,
+table.secondary td a:visited,
+table.secondary:active td a {
+  color: #555 !important;
+}
+
+table.success td {
+  background: #5da423;
+  border-color: #457a1a;
+}
+
+table.success:hover td {
+  background: #457a1a !important;
+}
+
+table.alert td {
+  background: #c60f13;
+  border-color: #970b0e;
+}
+
+table.alert:hover td {
+  background: #970b0e !important;
+}
+
+table.radius td {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+
+table.round td {
+  -webkit-border-radius: 500px;
+  -moz-border-radius: 500px;
+  border-radius: 500px;
+}
+
+/* Outlook First */
+
+body.outlook p {
+  display: inline !important;
+}
+
+/*  Media Queries */
+
+@media only screen and (max-width: 600px) {
+
+  table[class="body"] img {
+    width: auto !important;
+    height: auto !important;
+  }
+
+  table[class="body"] center {
+    min-width: 0 !important;
+  }
+
+  table[class="body"] .container {
+    width: 95% !important;
+  }
+
+  table[class="body"] .row {
+    width: 100% !important;
+    display: block !important;
+  }
+
+  table[class="body"] .wrapper {
+    display: block !important;
+    padding-right: 0 !important;
+  }
+
+  table[class="body"] .columns,
+  table[class="body"] .column {
+    table-layout: fixed !important;
+    float: none !important;
+    width: 100% !important;
+    padding-right: 0px !important;
+    padding-left: 0px !important;
+    display: block !important;
+  }
+
+  table[class="body"] .wrapper.first .columns,
+  table[class="body"] .wrapper.first .column {
+    display: table !important;
+  }
+
+  table[class="body"] table.columns td,
+  table[class="body"] table.column td {
+    width: 100% !important;
+  }
+
+  table[class="body"] .columns td.one,
+  table[class="body"] .column td.one { width: 8.333333% !important; }
+  table[class="body"] .columns td.two,
+  table[class="body"] .column td.two { width: 16.666666% !important; }
+  table[class="body"] .columns td.three,
+  table[class="body"] .column td.three { width: 25% !important; }
+  table[class="body"] .columns td.four,
+  table[class="body"] .column td.four { width: 33.333333% !important; }
+  table[class="body"] .columns td.five,
+  table[class="body"] .column td.five { width: 41.666666% !important; }
+  table[class="body"] .columns td.six,
+  table[class="body"] .column td.six { width: 50% !important; }
+  table[class="body"] .columns td.seven,
+  table[class="body"] .column td.seven { width: 58.333333% !important; }
+  table[class="body"] .columns td.eight,
+  table[class="body"] .column td.eight { width: 66.666666% !important; }
+  table[class="body"] .columns td.nine,
+  table[class="body"] .column td.nine { width: 75% !important; }
+  table[class="body"] .columns td.ten,
+  table[class="body"] .column td.ten { width: 83.333333% !important; }
+  table[class="body"] .columns td.eleven,
+  table[class="body"] .column td.eleven { width: 91.666666% !important; }
+  table[class="body"] .columns td.twelve,
+  table[class="body"] .column td.twelve { width: 100% !important; }
+
+  table[class="body"] td.offset-by-one,
+  table[class="body"] td.offset-by-two,
+  table[class="body"] td.offset-by-three,
+  table[class="body"] td.offset-by-four,
+  table[class="body"] td.offset-by-five,
+  table[class="body"] td.offset-by-six,
+  table[class="body"] td.offset-by-seven,
+  table[class="body"] td.offset-by-eight,
+  table[class="body"] td.offset-by-nine,
+  table[class="body"] td.offset-by-ten,
+  table[class="body"] td.offset-by-eleven {
+    padding-left: 0 !important;
+  }
+
+  table[class="body"] table.columns td.expander {
+    width: 1px !important;
+  }
+
+  table[class="body"] .right-text-pad,
+  table[class="body"] .text-pad-right {
+    padding-left: 10px !important;
+  }
+
+  table[class="body"] .left-text-pad,
+  table[class="body"] .text-pad-left {
+    padding-right: 10px !important;
+  }
+
+  table[class="body"] .hide-for-small,
+  table[class="body"] .show-for-desktop {
+    display: none !important;
+  }
+
+  table[class="body"] .show-for-small,
+  table[class="body"] .hide-for-desktop {
+    display: inherit !important;
+  }
+}
+
+      
+    </style>
+    <style type="text/css">
+
+      /* Your custom styles go here */
+	  
+
+	  
+	  img {
+	  	float: none;
+	  }
+	  
+	  table.container{
+	  	width: 600px;
+	  }
+	  
+	  table.twelve{
+	  	width: 600px;
+	  }
+	  
+	  a.eml_btn:hover{
+	  	background-color: #b80125 !important;
+		color: #fff !important;
+	  }
+	  
+	  .btns{
+	  	width: 100%;
+	  }
+	  
+	  .trans_white{
+		/*background: rgba(255, 255, 255, 0.67);*/
+		background-color:#ffffff;
+	  }
+	  
+	
+	  
+	  
+	.social_media{
+		margin:0 auto;
+		display:block;
+	}
+	  
+	table.columns td,
+	table.column td {
+  		padding: 0px 0px 0px; 
+	}
+	
+	a:hover{
+	 color:#c60c30!important;
+	}
+
+	table[class="body"] table.columns table.login_area td{
+		width: auto!important;
+	}
+	
+	a#main_button:hover{
+	  	background-color: #b80125 !important;
+		color: #fff !important;
+	}
+
+
+	a.white_link{
+		color:#ffffff;
+	}
+/* The 'td.static' class keeps tds from stretching to full width in tablet and mobile views */	
+	table[class="body"] table.columns td.static{
+		width: auto!important;
+	}
+
+    </style>
+  
+ <!--These styles are for Outlook 'email.mht' files displayed in IE when user clicks 'view in browser' in Outlook--> 
+    <!--[if IE]>
+
+
+<style>
+
+  .trans_white{
+		background-color: #ffffff!important;
+	  }
+      
+   td.center{
+   		background-position:left!important;
+   }   
+
+</style>
+
+
+	<![endif]-->
+
+
+<!--Outlook specific styles-->  
+    <!--[if gte mso 9]>
+<style type="text/css">
+
+
+table.body{
+width: 851px; 
+height:1052px;
+}
+
+</style>
+<![endif]-->
+  
+  
+  </head>
+  <body style="background:#333333;-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;margin: 0;padding: 0;width: 100% !important;">
+
+
+<!-- Wrapper/Container Table: Use a wrapper table to control the width and the background color consistently of your email. Use this approach instead of setting attributes on the body tag. -->
+    <table cellpadding="0" cellspacing="0" class="body" style="background-color:#c60c30;">
+      <tr align="center">
+<!--Begin BPBG-->   
+<!--td class 'center' below will cause message to potentially be out of view in outlook-->   
+        <!--Uncomment for background image-->
+        <!--<td class="center" width="851" height="1052" valign="top" style="background-image:url('http://goo.gl/P4929Q');background-repeat:no-repeat;background-position:center top;height:1052px;width:851px;">-->
+        <td class="center" width="851" height="1052" valign="top" style="height:1052px;width:851px;">
+  <!--[if gte mso 9]>
+  <!--<v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:851px;height:1052px;">
+    <v:fill type="tile" src="http://goo.gl/P4929Q" color="#F7F6F6" />
+    <v:textbox inset="0,0,0,0">
+     <div>-->
+  <![endif]-->
+ 
+<!--End BPBG-->   
+
+
+    <!--[if gte mso 9]>
+          <center>
+	<![endif]-->
+
+			<table cellpadding="0" cellspacing="0" class="container">
+  <tr>
+    <td>
+
+<!--Begin Email Content-->
+      <table cellpadding="0" cellspacing="0" style="margin-top:30px;">
+        <tr>
+          <td class="">
+          
+<!--Begin Header-->
+            <table cellpadding="0" cellspacing="0" width="437" class="twelve columns">
+              <tr>
+                <td colspan="5" style="text-align:center;padding:20px;font-weight:bold;">
+                
+					Trouble viewing this email?<br />
+                    <a style="color:#ffffff;text-decoration:underline;" href="http://10.120.70.224/email_testing/featured_products/featured_products_compiled.html">View in Web Browser</a>
+                   
+               
+
+  </td> 
+              
+   <td width="5" class="expander"></td>
+              </tr>
+                            <tr>
+                <td colspan="5" style="text-align:center;padding:36px;background-color:#ffffff;">
+                
+					<img src="../img/featured_products_header.gif" alt="City Electric Supply" style="margin:0 auto;"/>
+                    
+                    </td> 
+              
+   <td width="5" class="expander"></td>
+              </tr>
+                                          <tr>
+                <td colspan="5" bgcolor="#333333">
+
+
+<table class="container">
+  <tr>
+    <td>
+
+      <table class="row">
+        <tr>
+          <td width="86%" class="wrapper">
+
+            <table class="nine columns">
+              <tr>
+                <td style="color:#ffffff;padding:20px;">
+
+                  <a class="white_link" href="">HOME</a> &nbsp;|&nbsp; <a class="white_link" href="">COMPANY</a> &nbsp;|&nbsp; <a class="white_link" href="">MOBILE APP</a> &nbsp;|&nbsp; <a class="white_link" href="">CONTACT US</a>
+
+                </td>
+                <td class="expander"></td>
+              </tr>
+            </table>
+
+          </td>
+          <td width="14%" class="wrapper last">
+
+            <table cellpadding="0" cellspacing="0" class="three columns">
+              <tr>
+                <td class="static" width="53" align="center" style="text-align:center;height:25px;padding:8px;padding-top:21px;"><a href=""><img class="social_media" src="../img/icon_twitter_2.gif" alt="Twitter"/></a></td>
+      <td class="static" width="25" align="center" style="text-align:center;height:25px;padding:8px;padding-top:21px;"><a href=""><img class="social_media" src="../img/icon_fb_2.gif" alt="Facebook"/></a></td>
+      <td class="static" width="30" align="left" style="height:25px;padding:8px;padding-top:19px;padding-right:20px;"><a href=""><img class="social_media" src="../img/icon_linkedin_2.gif" alt="Linked In"/></a></td>
+                <td width="20" class="expander"></td>
+              </tr>
+            </table>
+
+          </td>
+        </tr>
+      </table>
+
+    </td>
+  </tr>
+</table>
+
+</td>
+                <td width="5" class="expander"></td>
+              </tr>
+<!--End Header-->   
+<!--Begin Body--> 
+ <tr>
+                <td colspan="5" bgcolor="#ffffff" class="trans_white" style="text-align:center;padding-top:45px;">
+    
+  
+                   <h1 style="margin-left:50px;margin-right:50px;width:auto;margin-bottom:13px;"><img src="../img/next_months_featured_products_h1.gif" alt="Featured Products"/></h1> 
+                  
+                  
+              
+               
+</td>
+              
+   <td width="5" class="expander"></td>
+              </tr>
+              <tr>
+                <td colspan="5" bgcolor="#ffffff" class="trans_white" style="text-align:center;padding-bottom:20px;padding-left:50px;padding-right:50px;"><hr style="margin:0 auto;"/>
+                  </td>
+              
+   <td width="5" class="expander"></td>
+              </tr>  
+              
+              
+              
+ <!--Begin responsive product table row-->              
+              
+              <tr>
+              <td colspan="6" bgcolor="#ffffff">
+              <table class="container" style="background-color:none;">
+  <tr>
+    <td>
+
+      <table class="row">
+        <tr>
+          <td class="wrapper">
+
+            <table class="eight columns" style="background-color:none;">
+              <tr>
+                <td>
+
+<h2 style="margin-left:50px;margin-right:50px;width:auto;color:#333333;font-size:20px;margin-top:13px;margin-bottom:13px;font-weight:bold;">IDEAL VDV II VOICE Data Testers</h2>
+                   <table border="0" cellspacing="0" style="margin-left:50px;margin-right:50px;">
+                    <tbody>
+                      <tr>
+                        <td class="static" width="11%" align="left" valign="top"><img src="../img/basic_icon1.gif" alt="" style="margin-right: 4px;"/></td>
+                        <td class="static" width="11%" align="left" valign="top"><img src="../img/basic_icon2.gif" alt="" style="margin-right: 4px;"/></td>
+                        <td class="static" width="78%" align="left" valign="top"><img src="../img/basic_icon3.gif" alt=""/></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <p style="margin-left:50px;margin-right:50px;color:#333333;line-height:23px;margin-top:13px;">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer in magna eu metus eleifend fringilla. Morbi eget tempor ante. Mauris blandit lorem ligula, a efficitur magna pretium ac. <a style="color:#c60c30;font-weight:bold;" href="http://10.120.70.224/product_vdv_vdtesters.aspx" target="_blank">Read More</a>
+                  
+                  </p>
+                  <p style="margin-left:50px;margin-right:50px;color:#c60c30;font-weight:bold;font-size:30px;margin-top:20px;margin-bottom:40px;">$125</p>
+
+                </td>
+                <td class="expander"></td>
+              </tr>
+            </table>
+
+          </td>
+          <td class="wrapper last">
+
+            <table class="four columns" style="background-color:none;">
+              <tr>
+                <td>
+					<a href="http://10.120.70.224/product_vdv_vdtesters.aspx" target="_blank">
+                    	<img src="img/VDVEmailBlast.jpg" alt="" style="margin:0 auto;width:100%!important;"/>
+                    </a>
+                    </td>
+                <td class="expander"></td>
+              </tr>
+            </table>
+
+          </td>
+        </tr>
+      </table>
+
+    </td>
+  </tr>
+</table>
+              </td>
+              </tr>
+              
+              
+  <!--End responsive product table row-->              
+               <tr>
+                <td colspan="5" bgcolor="#ffffff" class="trans_white" style="text-align:center;padding-bottom:20px;padding-left:50px;padding-right:50px;"><hr style="margin:0 auto;"/>
+                  </td>
+              
+   <td width="5" class="expander"></td>
+              </tr>   
+ <!--Begin responsive product table row-->              
+              
+              <tr>
+              <td colspan="6" bgcolor="#ffffff">
+              <table class="container" style="background-color:none;">
+  <tr>
+    <td>
+
+      <table class="row">
+        <tr>
+          <td class="wrapper">
+
+            <table class="eight columns" style="background-color:none;">
+              <tr>
+                <td>
+
+<h2 style="margin-left:50px;margin-right:50px;width:auto;color:#333333;font-size:20px;margin-top:13px;margin-bottom:13px;font-weight:bold;">Litetronics Retrofit</h2>
+                   <table border="0" cellspacing="0" style="margin-left:50px;margin-right:50px;">
+                    <tbody>
+                      <tr>
+                        <td class="static" width="11%" align="left" valign="top"><img src="../img/basic_icon1.gif" alt="" style="margin-right: 4px;"/></td>
+                        <td class="static" width="11%" align="left" valign="top"><img src="../img/basic_icon2.gif" alt="" style="margin-right: 4px;"/></td>
+                        <td class="static" width="78%" align="left" valign="top"><img src="../img/basic_icon3.gif" alt=""/></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <p style="margin-left:50px;margin-right:50px;color:#333333;line-height:23px;margin-top:13px;">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer in magna eu metus eleifend fringilla. Morbi eget tempor ante. Mauris blandit lorem ligula, a efficitur magna pretium ac. <a style="color:#c60c30;font-weight:bold;" href="http://10.120.70.224/product_lite_retro.aspx" target="_blank">Read More</a>
+                  
+                  </p>
+				  <p style="margin-left:50px;margin-right:50px;color:#c60c30;font-weight:bold;font-size:30px;margin-top:20px;margin-bottom:40px;">$129</p>
+                </td>
+                <td class="expander"></td>
+              </tr>
+            </table>
+
+          </td>
+          <td class="wrapper last">
+
+            <table class="four columns" style="background-color:none;">
+              <tr>
+                <td>
+					<a href="http://10.120.70.224/product_lite_retro.aspx" target="_blank">
+                    	<img src="img/LifetronicRetroFit_EmailBlast.jpg" alt="" style="margin:0 auto;width:100%!important;"/>
+                    </a>    
+                        
+                        </td>
+                <td class="expander"></td>
+              </tr>
+            </table>
+
+          </td>
+        </tr>
+      </table>
+
+    </td>
+  </tr>
+</table>
+              </td>
+              </tr>
+              
+              
+  <!--End responsive product table row-->              
+               <tr>
+                <td colspan="5" bgcolor="#ffffff" class="trans_white" style="text-align:center;padding-bottom:20px;padding-left:50px;padding-right:50px;"><hr style="margin:0 auto;"/>
+                  </td>
+              
+   <td width="5" class="expander"></td>
+              </tr>  
+ <!--Begin responsive product table row-->              
+              
+              <tr>
+              <td colspan="6" bgcolor="#ffffff">
+              <table class="container" style="background-color:none;">
+  <tr>
+    <td>
+
+      <table class="row">
+        <tr>
+          <td class="wrapper">
+
+            <table class="eight columns" style="background-color:none;">
+              <tr>
+                <td>
+
+<h2 style="margin-left:50px;margin-right:50px;width:auto;color:#333333;font-size:20px;margin-top:13px;margin-bottom:13px;font-weight:bold;">P&S Night Light</h2>
+                   <table border="0" cellspacing="0" style="margin-left:50px;margin-right:50px;">
+                    <tbody>
+                      <tr>
+                        <td class="static" width="11%" align="left" valign="top"><img src="../img/basic_icon1.gif" alt="" style="margin-right: 4px;"/></td>
+                        <td class="static" width="11%" align="left" valign="top"><img src="../img/basic_icon2.gif" alt="" style="margin-right: 4px;"/></td>
+                        <td class="static" width="78%" align="left" valign="top"><img src="../img/basic_icon3.gif" alt=""/></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <p style="margin-left:50px;margin-right:50px;color:#333333;line-height:23px;margin-top:13px;">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer in magna eu metus eleifend fringilla. Morbi eget tempor ante. Mauris blandit lorem ligula, a efficitur magna pretium ac. <a style="color:#c60c30;font-weight:bold;" href="http://10.120.70.224/product_ps_nightlight.aspx" target="_blank">Read More</a>
+                  
+                  </p>
+				  <p style="margin-left:50px;margin-right:50px;color:#c60c30;font-weight:bold;font-size:30px;margin-top:20px;margin-bottom:40px;">$29</p>
+                </td>
+                <td class="expander"></td>
+              </tr>
+            </table>
+
+          </td>
+          <td class="wrapper last">
+
+            <table class="four columns" style="background-color:none;">
+              <tr>
+                <td>
+				<a href="http://10.120.70.224/product_ps_nightlight.aspx" target="_blank">
+                    <img src="img/PandSNitelite_EmailBlast.jpg" alt="" style="margin:0 auto;width:100%!important;"/>
+                </a>    
+                    </td>
+                <td class="expander"></td>
+              </tr>
+            </table>
+
+          </td>
+        </tr>
+      </table>
+
+    </td>
+  </tr>
+</table>
+              </td>
+              </tr>
+              
+              
+  <!--End responsive product table row-->              
+               <tr>
+                <td colspan="5" bgcolor="#ffffff" class="trans_white" style="text-align:center;padding-bottom:20px;padding-left:50px;padding-right:50px;"><hr style="margin:0 auto;"/>
+                  </td>
+              
+   <td width="5" class="expander"></td>
+              </tr>  
+ <!--Begin responsive product table row-->              
+              
+              <tr>
+              <td colspan="6" bgcolor="#ffffff">
+              <table class="container" style="background-color:none;">
+  <tr>
+    <td>
+
+      <table class="row">
+        <tr>
+          <td class="wrapper">
+
+            <table class="eight columns" style="background-color:none;">
+              <tr>
+                <td>
+
+<h2 style="margin-left:50px;margin-right:50px;width:auto;color:#333333;font-size:20px;margin-top:13px;margin-bottom:13px;font-weight:bold;">Tamlite LED Highbay</h2>
+                   <table border="0" cellspacing="0" style="margin-left:50px;margin-right:50px;">
+                    <tbody>
+                      <tr>
+                        <td class="static" width="11%" align="left" valign="top"><img src="../img/basic_icon1.gif" alt="" style="margin-right: 4px;"/></td>
+                        <td class="static" width="11%" align="left" valign="top"><img src="../img/basic_icon2.gif" alt="" style="margin-right: 4px;"/></td>
+                        <td class="static" width="78%" align="left" valign="top"><img src="../img/basic_icon3.gif" alt=""/></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <p style="margin-left:50px;margin-right:50px;color:#333333;line-height:23px;margin-top:13px;">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer in magna eu metus eleifend fringilla. Morbi eget tempor ante. Mauris blandit lorem ligula, a efficitur magna pretium ac. <a style="color:#c60c30;font-weight:bold;" href="http://10.120.70.224/product_tl_hibay.aspx" target="_blank">Read More</a>
+                  
+                  </p>
+				  <p style="margin-left:50px;margin-right:50px;color:#c60c30;font-weight:bold;font-size:30px;margin-top:20px;margin-bottom:40px;">$69</p>
+                </td>
+                <td class="expander"></td>
+              </tr>
+            </table>
+
+          </td>
+          <td class="wrapper last">
+
+            <table class="four columns" style="background-color:none;">
+              <tr>
+                <td>
+				<a href="http://10.120.70.224/product_tl_hibay.aspx" target="_blank">
+                    <img src="img/TamliteLEDHiBay_emailBlast.jpg" alt="" style="margin:0 auto;width:100%!important;"/>
+                </a>    
+                    </td>
+                <td class="expander"></td>
+              </tr>
+            </table>
+
+          </td>
+        </tr>
+      </table>
+
+    </td>
+  </tr>
+</table>
+              </td>
+              </tr>
+              
+              
+  <!--End responsive product table row-->              
+               <tr>
+                <td colspan="5" bgcolor="#ffffff" class="trans_white" style="text-align:center;padding-bottom:20px;padding-left:50px;padding-right:50px;"><hr style="margin:0 auto;"/>
+                  </td>
+              
+   <td width="5" class="expander"></td>
+              </tr> 
+              
+  <tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
+  <td colspan="5" bgcolor="#ffffff" class="trans_white" style="text-align: center; word-break: break-word; -webkit-hyphens: auto; -moz-hyphens: auto; hyphens: auto; border-collapse: collapse !important; vertical-align: top; color: #222222; font-family: 'Helvetica', 'Arial', sans-serif; font-weight: normal; line-height: 19px; font-size: 14px; margin: 0; padding: 45px 0px 0px;" align="center" valign="top">
+    
+  
+               		
+                  <p style="text-align: center; color: #333333; line-height: 30px; font-family: 'Helvetica', 'Arial', sans-serif; font-weight: normal; font-size: 14px; margin: 0 50px 10px; padding: 0;" align="center">
+                  	City Electric Supply | 400 S. Record St. | Dallas | TX  | 75202
+                  	<a href="http://www.cityelectricsupply.com" style="color: #333333; text-decoration: none;">www.cityelectricsupply.com</a>
+                  </p>
+              
+               
+</td>
+              
+   <td width="5" class="expander" style="word-break: break-word; -webkit-hyphens: auto; -moz-hyphens: auto; hyphens: auto; border-collapse: collapse !important; vertical-align: top; text-align: left; visibility: hidden; width: 0px; color: #222222; font-family: 'Helvetica', 'Arial', sans-serif; font-weight: normal; line-height: 19px; font-size: 14px; margin: 0; padding: 0;" align="left" valign="top"></td>
+              </tr>                                                             
+
+              <tr style="height:40px;">
+                <td width="211" bgcolor="#333333" style="text-align:center;height:40px;">
+                </td>
+                <td width="53" bgcolor="#333333" style="text-align:center;height:25px;padding:8px;padding-top:15px;">
+                	<a href=""></a>
+                    <a href=""><img class="social_media" src="../img/icon_twitter_2.gif" alt="Twitter"/></a></td>
+                <td width="53" bgcolor="#333333" style="text-align:center;height:25px;padding:8px;padding-top:15px;">
+                	<a href=""></a>
+                    <a href=""><img class="social_media" src="../img/icon_fb_2.gif" alt="Facebook"/></a></td>
+                <td width="49" bgcolor="#333333" style="text-align:center;height:25px;padding:8px;padding-top:13px;">
+                	<a href=""></a>
+                    <a href=""><img class="social_media" src="../img/icon_linkedin_2.gif" alt="Linked In"/></a></td>
+                <td width="227" bgcolor="#333333" style="text-align:center;height:40px;">&nbsp;</td>
+              
+   <td width="5" class="expander"></td>
+              </tr>
+              <tr>
+                <td colspan="5" style="text-align:center;height:45px;padding-top:25px;color:#ffffff;"><span style="display:none;"><a style="color:#ffffff;" href="#">Account Login</a>  &nbsp;|&nbsp;  <a style="color:#ffffff;" href="#">Locate Branch</a>  &nbsp;|&nbsp; <a style="color:#ffffff;" href="#">Get Mobile App</a> </span>
+    
+  <br />
+  <br />
+  <a style="color:#333333;font-weight:bold;" href="#">Unsubscribe Now</a>
+              
+              
+               
+</td>
+              
+   <td width="5" class="expander"></td>
+              </tr>
+                   <tr>
+                <td colspan="5" style="text-align:center;height:105px;color:#ffffff;">&nbsp;</td>
+              
+   <td width="5" class="expander"></td>
+              </tr>         
+<!--End Body-->               
+            </table>
+
+
+          </td>
+        </tr>
+      </table>
+<!--End Email Content-->
+
+    </td>
+  </tr>
+</table>
+
+          
+    <!--[if gte mso 9]>
+          </center>
+	<![endif]-->
+      
+        
+<!--Begin BPBG-->      
+          
+  <!--[if gte mso 9]>
+  <!--</div>
+    </v:textbox>
+  </v:rect>-->
+  <![endif]-->
+</td>
+<!--End BPBG--> 
+  </tr>
+    </table>
+  </body>
+</html>
